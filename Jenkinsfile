@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'echo "Build"'
+        sh 'mvn clean install -U -DskipTests -pl !cs-vmware'
       }
     }
     stage('Test') {
